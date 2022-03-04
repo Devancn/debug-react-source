@@ -290,11 +290,11 @@ module.exports = function(webpackEnv) {
         .filter(ext => useTypeScript || !ext.includes('ts')),
         alias: {
           "react-native": "react-native-web",
-          "react": path.resolve(__dirname, '../src/react/packages/react'),
-          "react-dom": path.resolve(__dirname, '../src/react/packages/react-dom'),
-          "shared": path.resolve(__dirname, '../src/react/packages/shared'),
-          "react-reconciler": path.resolve(__dirname, '../src/react/packages/react-reconciler'),
-          "legacy-events": path.resolve(__dirname, '../src/react/packages/legacy-events'),
+          "react": path.resolve(__dirname, '../src/react-source/packages/react'),
+          "react-dom": path.resolve(__dirname, '../src/react-source/packages/react-dom'),
+          "shared": path.resolve(__dirname, '../src/react-source/packages/shared'),
+          "react-reconciler": path.resolve(__dirname, '../src/react-source/packages/react-reconciler'),
+          "legacy-events": path.resolve(__dirname, '../src/react-source/packages/legacy-events'),
          },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
