@@ -215,10 +215,11 @@ function legacyRenderSubtreeIntoContainer(
         originalCallback.call(instance);
       };
     }
+    console.log('999999')
     // Update
     updateContainer(children, fiberRoot, parentComponent, callback);
   }
-  // return getPublicRootInstance(fiberRoot);
+  return getPublicRootInstance(fiberRoot);
 }
 
 export function findDOMNode(

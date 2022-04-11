@@ -234,6 +234,7 @@ export function updateContainer(
   if (__DEV__) {
     onScheduleRoot(container, element);
   }
+  
   const current = container.current;
   const currentTime = requestCurrentTimeForUpdate();
 
@@ -293,7 +294,6 @@ export function updateContainer(
     }
     update.callback = callback;
   }
-debugger
   enqueueUpdate(current, update);
   scheduleWork(current, expirationTime);
 

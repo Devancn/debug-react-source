@@ -638,7 +638,6 @@ function ensureRootIsScheduled(root: FiberRoot) {
       {timeout: expirationTimeToMs(expirationTime) - now()},
     );
   }
-
   root.callbackNode = callbackNode;
 }
 
@@ -989,7 +988,6 @@ function finishConcurrentRender(
 // This is the entry point for synchronous tasks that don't go
 // through Scheduler
 function performSyncWorkOnRoot(root) {
-  
   // Check if there's expired work on this root. Otherwise, render at Sync.
   const lastExpiredTime = root.lastExpiredTime;
   const expirationTime = lastExpiredTime !== NoWork ? lastExpiredTime : Sync;
@@ -2032,7 +2030,6 @@ function commitRootImpl(root, renderPriorityLevel) {
     // of the batch.
     return null;
   }
-
   // If layout work was scheduled, flush it now.
   flushSyncCallbackQueue();
   return null;

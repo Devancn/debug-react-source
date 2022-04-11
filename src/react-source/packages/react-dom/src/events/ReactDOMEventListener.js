@@ -231,6 +231,7 @@ export function dispatchEvent(
   container: Document | Element | Node,
   nativeEvent: AnyNativeEvent,
 ): void {
+  
   if (!_enabled) {
     return;
   }

@@ -682,6 +682,7 @@ function completeWork(
       return null;
     }
     case HostComponent: {
+      
       popHostContext(workInProgress);
       const rootContainerInstance = getRootHostContainer();
       const type = workInProgress.type;
